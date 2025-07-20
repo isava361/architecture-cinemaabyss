@@ -5,7 +5,7 @@
 1. Спроектируйте to be архитектуру КиноБездны, разделив всю систему на отдельные домены и организовав интеграционное взаимодействие и единую точку вызова сервисов.
 Результат представьте в виде контейнерной диаграммы в нотации С4.
 Добавьте ссылку на файл в этот шаблон
-[ссылка на файл](ссылка)
+[ссылка на диаграмму](https://editor.plantuml.com/uml/hLPBSzem4BxxLwYSo0m9bvvwIe0-CabQ2itqc97b1JJOaYl98RJJ_zvT-IaCUSoKcO0jxNxxxUhRLIwjuyOLMHevwL9WDrBf67udYhEfLWwU79j9lZOyYoAdS-OqYxLpEcE9D22Sr2gAtaabqYA1mgHiurnkFup7Xkykrj9jYhYmO0HXANSXT3PUIC5DehzAo24TJz-VprEktFtTxJZZre71fOUfpdAjo2CdRj4SZDLgI50ZDhZ7dm7-_aG_IvHst8aDo_IZ13iuYvPxnCc6dmn6lSfpjEoajOFOIWVZJCSI4-PvJb1enbRQCBS1Hb48bIS9I-1H2h0ZHXaOdJ84pi5mLnWOCN3Y0kDL0Hyckb09D_jX6owCFU5Y2oePdFs967wembmgCCFFtC6Exz5wRlJJdbNlnAnwRDWXOIA7V1JMtnz8YSgGjYUBZ4BqBLzjkK-I2qIueLU2zWyUcDkz4XkibouiatXMXlkpxK5HwU-uuklc85ZrofPbU0Ak7gcIYSVFo4QgjQzjd-0TdLmBwr_VXjkSVGWyv_iCLTH2Lmkl0izBspxg0b37k9Lmgb4B7gw_BG4J-FPZVdp2Gr4yRQDzKodki2b-OUEmw_RKdetOd2u6tM63CgYGcIu1HGdOOt25DdidXMqfrE1UGjKs0c4E_B_6diLUUBD9hRaPHeYvzHdMppw2TThKElCys3bBDLOOMzWMiHL6vhv4EFTSWOkvWHKOKBx9VJ-JIhHr1fRVRuyGyUBqJ4gPlaYbb2RBmF6wCC_XDsNsCPQWh7v5lZvL7kl2uHWW5qkcqrIAxHViQS10VvivXLggEwDSwJH6kK3EjU9OlMNBhRCkJ2d2KeCzJGOe1ri12lw5lMExdWTRnoYUCC7Hl82qkZOwrm5goD8W7LUN0HgINMlHpkC5b1UTnGxzLO3ruu2C6vDm92vWBV5mFOyHMw6YDe4U3xrFJQXUcDSD7NARoC3noEI8IMr42uzaws_GPdu6hiVcSXiXt6txOZRf3gFMFYXKqy-dh0yBSqgmkT7OknQpQLnx6H-gz9dyIuJ-h0lRyXJfwgOzCYgRfPC9rhVqjLhfgfKxDz2H4jOEF_WMwDPktBg33Zl9QqyOg3iBDTa0db1L3NtOLnIaM-PUrvvmh8GLAkQ5855qYMluxzy_)
 
 # Задание 2
 
@@ -59,6 +59,11 @@
 Необходимые тесты для проверки этого API вызываются при запуске npm run test:local из папки tests/postman 
 Приложите скриншот тестов и скриншот состояния топиков Kafka из UI http://localhost:8090 
 
+<img width="509" height="345" alt="image" src="https://github.com/user-attachments/assets/5a416c8e-9717-4f51-9e28-33db1dfc0526" />
+
+
+<img width="1512" height="593" alt="image" src="https://github.com/user-attachments/assets/907f842f-bc0f-4025-845e-18a93e66b4d7" />
+
 # Задание 3
 
 Команда начала переезд в Kubernetes для лучшего масштабирования и повышения надежности. 
@@ -109,6 +114,7 @@ jobs:
 Как только сборка отработает и в github registry появятся ваши образы, можно переходить к блоку настройки Kubernetes
 Успешным результатом данного шага является "зеленая" сборка и "зеленые" тесты
 
+**Доработал, добавил дополнительно запуск тестов при любом изменении workflow/изменения самих сервисов**
 
 ### Proxy в Kubernetes
 
@@ -274,6 +280,11 @@ cat .docker/config.json | base64
 
 #### Шаг 3
 Добавьте сюда скриншота вывода при вызове https://cinemaabyss.example.com/api/movies и  скриншот вывода event-service после вызова тестов.
+<img width="1512" height="845" alt="image" src="https://github.com/user-attachments/assets/afb42ccf-30ba-4ac2-b224-7dec78d79e65" />
+
+<img width="709" height="536" alt="image" src="https://github.com/user-attachments/assets/13d012e0-10d3-4377-abad-07e50486a2f3" />
+
+<img width="1275" height="529" alt="image" src="https://github.com/user-attachments/assets/726f9fc3-cc75-4813-91fd-b5e4f890215a" />
 
 
 # Задание 4
@@ -349,6 +360,13 @@ minikube tunnel
 Потом вызовите 
 https://cinemaabyss.example.com/api/movies
 и приложите скриншот развертывания helm и вывода https://cinemaabyss.example.com/api/movies
+
+<img width="1254" height="512" alt="image" src="https://github.com/user-attachments/assets/a5446ff5-903d-4c12-9d5b-22049aa739f2" />
+
+
+<img width="1512" height="842" alt="image" src="https://github.com/user-attachments/assets/a11ab628-571e-4ed5-a8c3-a875499aa1fc" />
+
+
 
 ## Удаляем все
 
