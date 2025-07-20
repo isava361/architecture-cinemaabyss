@@ -5,7 +5,7 @@ global:
 
 # Image pull secrets
 imagePullSecrets:
-  dockerconfigjson: ewoJImF1dGhzIjogewoJCSJnaGNyLmlvIjogewoJCQkiYXV0aCI6
+  dockerconfigjson: ewoJImF1dGhzIjogewoJCSJnaGNyLmlvIjogewoJCQkiYXV0aCI6ICJhWE5oZG1Fek5qRTZaMmh3WDBWR05VbE9RMmhzTkZKWE4xazVRVzl6UkhGeVpsZElWakJTUVVwWFF6STRWbkpLWlE9PSIKCQl9Cgl9Cn0K
 # Database configuration
 database:
   host: postgres
@@ -33,7 +33,7 @@ database:
 monolith:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/monolith
+    repository: ghcr.io/isava361/architecture-cinemaabyss/monolith
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -51,9 +51,12 @@ monolith:
 
 # Proxy service configuration
 proxyService:
+  monolithURL: http://monolith:8080
+  moviesURL: http://movies-service:8081
+  eventsURL: http://events-service:8082
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/proxy-service
+    repository: ghcr.io/isava361/architecture-cinemaabyss/proxy-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -73,7 +76,7 @@ proxyService:
 moviesService:
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/movies-service
+    repository: ghcr.io/isava361/architecture-cinemaabyss/movies-service
     tag: latest
     pullPolicy: Always
   replicas: 1
@@ -91,9 +94,10 @@ moviesService:
 
 # Events service configuration
 eventsService:
+  kafkabroker: kafka:9092
   enabled: true
   image:
-    repository: ghcr.io/db-exp/cinemaabysstest/events-service
+    repository: ghcr.io/isava361/architecture-cinemaabyss/events-service
     tag: latest
     pullPolicy: Always
   replicas: 1
