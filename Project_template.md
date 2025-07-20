@@ -350,12 +350,6 @@ minikube tunnel
 https://cinemaabyss.example.com/api/movies
 и приложите скриншот развертывания helm и вывода https://cinemaabyss.example.com/api/movies
 
-<img width="1254" height="512" alt="image" src="https://github.com/user-attachments/assets/a5446ff5-903d-4c12-9d5b-22049aa739f2" />
-
-
-<img width="1512" height="842" alt="image" src="https://github.com/user-attachments/assets/a11ab628-571e-4ed5-a8c3-a875499aa1fc" />
-
-
 ## Удаляем все
 
 ```bash
